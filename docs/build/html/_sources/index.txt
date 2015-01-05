@@ -1,22 +1,42 @@
-.. django-underscore-filters documentation master file, created by
-   sphinx-quickstart on Mon Jan  5 02:21:57 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Documentation for: django-underscore-filters templatetags
+=========================================================
 
-Welcome to django-underscore-filters's documentation!
-=====================================================
+These filters allow django template use of elements beginning with an underscore character.
 
-Contents:
+Purpose:
+--------
 
-.. toctree::
-   :maxdepth: 2
+The sole purpose of these filters are to allow operations with template elements that naturally start with the underscore ('_') character.
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Usage
+=====
 
+Form Fields
+-----------
+
+Usage: ``field_``
+
+Example::
+
+   {{ form|field_:'_field_name' }}
+
+Attributes
+----------
+
+Usage: ``attr_``
+
+Example::
+   
+   {{ my_tag|attr_:'_attr_name' }}
+
+Dictionary Keys
+---------------
+
+Usage: ``dict_``
+
+Example::
+   
+   {{ my_dict|dict_:'_key_name' }}
